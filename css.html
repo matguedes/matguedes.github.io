@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="css.css" rel="stylesheet" type="text/css">
+
+    <title>Início</title>
+</head>
+
+<body>
+    <h1>Essa página tá meio sem graça, não está?</h1>
+    <p>É porque ela está sem CSS</p>
+    <p>Assim é a vida do Edionay sem o Matheus (seu CSS)</p>
+    <p>Quer um exemplo prático?????? Olha ali embaixo e...</p>
+    <input id="toggleButton" type="button" onclick="toggleWrapper()" value="Coloca o Matueus!">
+
+    <div id="edionay">Edionay</div>
+    <div class="wrapper" id="wrapper" style="display:none">
+        <div class="clip-text clip-text_tree clip-text--no-textzone">Edionay</div>
+    </div>
+    <script>
+        const wrapper = document.getElementById('wrapper')
+        const edionay = document.getElementById('edionay')
+        const button = document.getElementById('toggleButton')
+
+        function toggleWrapper() {
+            wrapper.style.display = wrapper.style.display == "block" ? "none" : "block"
+            edionay.style.display = wrapper.style.display == "none" ? "block" : "none"
+            button.value = button.value == "Coloca o Matueus!" ? "Tira o Matheus" : "Coloca o Matueus!"
+
+        }
+    </script>
+</body>
+
+</html>
